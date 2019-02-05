@@ -8,7 +8,7 @@
             </div>
 
             <div class="col-lg-9">
-                <h1>Home</h1>
+                <h1>Content</h1>
             </div>
         </div>
     </div>
