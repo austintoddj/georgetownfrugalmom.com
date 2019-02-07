@@ -18,12 +18,21 @@
                     @endif
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle py-1" href="#" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
+                            <img src="{{ sprintf('%s%s%s', 'https://secure.gravatar.com/avatar/', md5(strtolower(trim(auth()->user()->email))), '?s=200') }}"
+                                 class="rounded-circle my-0 mr-2"
+                                 style="width: 31px"
+                                 alt="{{ auth()->user()->name }}"
+                            >
+                            {{ auth()->user()->name }} <span class="caret"></span>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <h6 class="dropdown-header">Admin</h6>
+                            <a href="{{ url('dashboard') }}" class="dropdown-item">Dashboard</a>
+                            <a href="{{ url('canvas') }}" class="dropdown-item">Canvas</a>
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

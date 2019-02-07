@@ -400,7 +400,7 @@ return [
 
         'script-src' => [
             'allow' => [
-                // 'url',
+                'https://cdn.jsdelivr.net'
             ],
 
             'hashes' => [
@@ -436,6 +436,7 @@ return [
         'style-src' => [
             'allow' => [
                 'https://fonts.googleapis.com',
+                'https://cdn.jsdelivr.net'
             ],
 
             'hashes' => [
@@ -463,6 +464,8 @@ return [
 
         'img-src' => [
             'allow' => [
+                'https://favicons.githubusercontent.com',
+                'https://secure.gravatar.com',
                 'data:',
             ],
 
@@ -478,7 +481,7 @@ return [
         ],
 
         'connect-src' => [
-            //
+            'self' => true,
         ],
 
         'font-src' => [
