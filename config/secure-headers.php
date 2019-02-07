@@ -400,7 +400,7 @@ return [
 
         'script-src' => [
             'allow' => [
-                'https://cdn.jsdelivr.net'
+                'https://cdn.jsdelivr.net',
             ],
 
             'hashes' => [
@@ -436,7 +436,7 @@ return [
         'style-src' => [
             'allow' => [
                 'https://fonts.googleapis.com',
-                'https://cdn.jsdelivr.net'
+                'https://cdn.jsdelivr.net',
             ],
 
             'hashes' => [
